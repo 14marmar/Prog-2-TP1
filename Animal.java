@@ -1,6 +1,6 @@
 // Fichier :     Animal.java
-// Création:     
-// Auteurs :      
+// Création:     3 mars 2022
+// Auteurs :     Alexandre Stang (20211138) et Louis-Antoine Martel-Marquis (20217669)
 //
 // Ce code n'est pas protégé par un copyright.
 // 
