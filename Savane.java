@@ -19,7 +19,7 @@
 
 /**
      TP1 - IFT1025
-     noms et prénoms des coéquipier(s)
+     Martel-Marquis, Louis-Antoine (20217669) and Stang, ALexandre (20211138)
 
      This class simulates the cycles of life of a simple savane
      composed of: herb and animals (lions and Antelopes),
