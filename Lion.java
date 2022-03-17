@@ -8,10 +8,7 @@
 //  Créé pour le cours IFT1025 H22
 //
 
-/**
-   class Lion
-    extends Animal
-
-**/
+public class Lion extends Animal {
+    }
 
     // TO BE COMPLETED //
