@@ -8,10 +8,8 @@
 //  Créé pour le cours IFT1025 H22
 //
 
-/**
-   class Antilope
-    extends Animal
+public class Antilope extends Animal{
+    }
 
-**/
 
     // TO BE COMPLETED //
