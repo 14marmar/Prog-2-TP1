@@ -29,7 +29,23 @@ public class Population implements EcoSysteme, Iterable<Animal> {
     public Population( Herbe herbe, ArrayList<Animal> proies, ArrayList<Animal> predateurs ) {
 	
 	// TO BE COMPLETED //
-	
+    
+    }
+
+    @Override
+    public void vieillir() {
+        for (int i=0; i<individus.size(); i++){
+            individus.get(i).vieillir();
+        }
+    }
+
+    public void melanger() {
+        Collections.shuffle(this.individus, new Random(4));
+    }
+
+    @Override
+    public void chasser() {
+        melanger();
     }
 
     // TO BE COMPLETED //
