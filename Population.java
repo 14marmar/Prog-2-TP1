@@ -1,6 +1,6 @@
 // Fichier :     Population.java
-// Création:     2022.03.14
-// Auteurs :     Alexandre Stang (20211138) et Louis-Antoine Martel-Marquis (20217669)    
+// Création:     
+// Auteurs :     
 //
 // Ce code n'est pas protégé par un copyright.
 // 
@@ -24,6 +24,7 @@ import java.util.Random;
 public class Population implements EcoSysteme, Iterable<Animal> {
 
     // TO BE COMPLETED //
+    private ArrayList<Animal> individus = new ArrayList<>();
 
     public Population( Herbe herbe, ArrayList<Animal> proies, ArrayList<Animal> predateurs ) {
 	
@@ -32,5 +33,7 @@ public class Population implements EcoSysteme, Iterable<Animal> {
     }
 
     // TO BE COMPLETED //
-    
+    public ArrayList<Animal> getIndividus(){
+		return this.individus;
+	}
 }
