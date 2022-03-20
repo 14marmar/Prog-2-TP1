@@ -123,6 +123,25 @@ public class TestSecondaire {
     }
     totalTest++;
     
+    Savane cachePop = new Savane(8,1.1,500,1.1,1,20000,200000,3.0,true);  
+    Population popC = cachePop.getSavane();
+    
+    //vieillir() NouveauTest
+    t1 = popC.getIndividus().get(0).estProie() && popC.getIndividus().get(46).estProie() && popC.getIndividus().get(499).estProie();
+    t2 = popC.getIndividus().get(500).estPredateur() && popC.getIndividus().get(503).estPredateur() && popC.getIndividus().get(507).estPredateur();
+    popC.getIndividus().get(0).setAge(14);
+    popC.getIndividus().get(1).setAge(15);
+    popC.getIndividus().get(500).setAge(49);
+    popC.getIndividus().get(501).setAge(50);
+
+    popC.vieillir();
+
+    
+    if(!t1 || !t2 || popC.getNombreProies()!=499 || popC.getNombrePredateurs()!=7 ){
+        print("Problème avec la fonction Population.vieillir");
+        nT++;
+    }
+    totalTest++;
 
 
     //reproduire
@@ -134,10 +153,35 @@ public class TestSecondaire {
     pop.vieillir();
     pop.reproduire();
     if(pop.getNombrePredateurs()!=12 || pop.getNombreProies()!=1125){
-        print("Problème avec la fonction Population.reproduire");
+        print("Problème avec la fonction Population.reproduire Nouveau test");
         nT++;
     }
     totalTest++;
+
+    Savane cachePop2 = new Savane(8,1.1,500,1.1,1,20000,200000,3.0,true);  
+    Population popC2 = cachePop2.getSavane();
+    
+    //reproduire() NouveauTest
+    popC2.getIndividus().get(0).setAge(1);
+    popC2.getIndividus().get(1).setAge(1);
+    popC2.getIndividus().get(2).setAge(1);
+    popC2.getIndividus().get(500).setAge(4);
+    popC2.getIndividus().get(501).setAge(4);
+    popC2.getIndividus().get(502).setAge(4);
+    popC2.getIndividus().get(503).setAge(4);
+
+    popC2.vieillir();
+
+    popC2.reproduire();
+
+    
+    if(popC2.getNombreProies()!=501 || popC2.getNombrePredateurs()!=10 ){
+
+        print("Problème avec la fonction Population.reproduire() Nouveau test");
+        nT++;
+    }
+    totalTest++;
+
     //chasser    
 
     testV = new Savane(8,1.1,500,1.1,1,20000,200000,3.0,true);  
@@ -158,8 +202,18 @@ public class TestSecondaire {
     }
     totalTest++;
 
-    System.out.println("Reussi : " +(totalTest-nT)*1.5);
-    System.out.println("Rate : " +(nT)*1.5);
+    testV = new Savane(800,1.1,5000,1.1,1,20000,200000,3.0,true);  
+    pop = testV.getSavane();
+    pop.chasser();
+    pop.chasser();
+    if(pop.getNombrePredateurs()!=0 || pop.getNombreProies()!=0){
+        print("Problème avec la fonction Population.chasser Nouveau");
+        nT++;
+    }
+    totalTest++;
+
+    System.out.println("Reussi : " +(totalTest-nT));
+    System.out.println("Rate : " +(nT));
     }
     public static void print( String text){
         System.out.println(text);
