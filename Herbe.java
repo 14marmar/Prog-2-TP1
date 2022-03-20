@@ -34,9 +34,9 @@ public class Herbe {
         this.tauxCroissance = tauxCroissance;
     }
     // getters
-    public double getMasse() { return masse; }
+    public double getMasseAnnuelle() { return masseAnnuelle; }
     // setters
-    public void setMasse( double masse ){ this.masse = masse; }
+    public void setMasseAnnuelle( double masseAnnuelle ){ this.masseAnnuelle = masseAnnuelle; }
     // behavior
     public void vieillir(){
         //this.masseAnnuelle = Math.max( 0, this.masseAnnuelle );
@@ -44,5 +44,5 @@ public class Herbe {
         this.masse = Math.min( this.masse * this.tauxCroissance, this.masseCritique );
         this.masseAnnuelle = this.masse * 0.6; // backup herb of 60% of the current mass
     }
-    public String toString() { return "[" + this.getMasse() + " d'herbe]"; }
+    public String toString() { return "[" + masse + " d'herbe]"; }
 }
