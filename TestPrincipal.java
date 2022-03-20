@@ -10,19 +10,19 @@ public class TestPrincipal {
         
         double[] testing = savane.simule();
         if(testing[0]-1<1){
-            print("Note actuel 0/6");
+            print("Note actuel 0/5");
         }
         else if(testing[0]-1<2){
-            print("Note actuel 2/6");
+            print("Note actuel 2/5");
         }
         else if(testing[0]-1<11){
-            print("Note actuel 4/6");
+            print("Note actuel 3/5");
         }
         else if(testing[0]-1<100){
-            print("Note actuel 5/6");
+            print("Note actuel 4/5");
         }
         else {
-            print("Note actuel 6/6");
+            print("Note actuel 5/5");
         }        
     }
     public static void print( String text){
